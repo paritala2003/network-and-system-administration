@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Assessment Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2a5298;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1e3c72;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>📘 Network Assessment Submission</h2>
+
+        <form>
+            <label>Student Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+
+            <label>Student ID</label>
+            <input type="text" placeholder="Enter your student ID" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Assessment Title</label>
+            <input type="text" placeholder="Enter assessment title" required>
+
+            <label>Upload File</label>
+            <input type="file" required>
+
+            <button type="submit">Submit Assessment</button>
+        </form>
+
+        <div class="footer">
+            Hosted on AWS EC2 | Deployed using Docker
+        </div>
+    </div>
+</body>
+</html>
