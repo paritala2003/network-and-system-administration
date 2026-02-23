@@ -20,9 +20,17 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd ~/website
-            git pull origin main
-            docker stop $(docker ps -q) || true
-            docker rm $(docker ps -aq) || true
-            docker build -t website .
-            docker run -d -p 80:80 website
+           script: |
+           if [ ! -d "website" ]; then
+                git clone
+					 https://github.com/paritala2003/network-and-system-administration.git website
+           fi
+
+           cd website
+           git pull origin main
+
+           docker stop $(docker ps -q) || true
+           docker rm $(docker ps -aq) || true
+
+           docker build -t website .
+           docker run -d -p 80:80 website
