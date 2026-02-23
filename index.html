@@ -1,89 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Network Assessment Submission</title>
+    <title>CI/CD DevOps Project - Live Demo</title>
+    <meta charset="UTF-8">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
         }
 
-        .container {
-            background: white;
+        header {
+            background: #1e293b;
             padding: 30px;
-            border-radius: 10px;
-            width: 400px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
         }
 
         h2 {
-            text-align: center;
-            margin-bottom: 20px;
+            color: #22d3ee;
         }
 
-        input, textarea {
-            width: 100%;
+        code {
+            display: block;
+            background: #0a0f1c;
             padding: 10px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            margin-top: 10px;
+            border-radius: 6px;
+            color: #38bdf8;
         }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #2a5298;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
+        .status {
+            color: lightgreen;
+            font-weight: bold;
         }
 
-        button:hover {
-            background-color: #1e3c72;
-        }
-
-        .footer {
+        footer {
+            background: #1e293b;
             text-align: center;
-            margin-top: 15px;
-            font-size: 12px;
-            color: gray;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h2>📘 Network Assessment Submission</h2>
 
-        <form>
-            <label>Student Name</label>
-            <input type="text" placeholder="Enter your full name" required>
+<header>
+    <h1>🚀 Automated CI/CD Deployment</h1>
+    <p>AWS EC2 + Docker + GitHub Actions</p>
+</header>
 
-            <label>Student ID</label>
-            <input type="text" placeholder="Enter your student ID" required>
+<section>
 
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email" required>
+<div class="card">
+    <h2>📌 Project Overview</h2>
+    <p>
+        This project demonstrates automated deployment of a containerized web application 
+        using GitHub Actions CI/CD pipeline to AWS EC2.
+    </p>
+</div>
 
-            <label>Assessment Title</label>
-            <input type="text" placeholder="Enter assessment title" required>
+<div class="card">
+    <h2>⚙️ Infrastructure Used</h2>
+    <ul>
+        <li>AWS EC2 (Amazon Linux 2023)</li>
+        <li>Docker Containerization</li>
+        <li>GitHub Repository</li>
+        <li>GitHub Actions Workflow</li>
+        <li>SSH Secure Deployment</li>
+    </ul>
+</div>
 
-            <label>Upload File</label>
-            <input type="file" required>
+<div class="card">
+    <h2>🔄 CI/CD Workflow Process</h2>
+    <p>Every push to <strong>main branch</strong> triggers:</p>
+    <ul>
+        <li>Checkout repository</li>
+        <li>SSH connection to EC2</li>
+        <li>Clone/Pull latest code</li>
+        <li>Docker build</li>
+        <li>Stop old container</li>
+        <li>Deploy updated container</li>
+    </ul>
+</div>
 
-            <button type="submit">Submit Assessment</button>
-        </form>
+<div class="card">
+    <h2>🐳 Docker Commands Used</h2>
+    <code>
+docker build -t website .<br>
+docker run -d -p 80:80 website
+    </code>
+</div>
 
-        <div class="footer">
-            Hosted on AWS EC2 | Deployed using Docker
-        </div>
-    </div>
+<div class="card">
+    <h2>🌍 Live Deployment Status</h2>
+    <p>Server: AWS EC2</p>
+    <p>Container: Running</p>
+    <p>Status: <span class="status">ACTIVE</span></p>
+</div>
+
+</section>
+
+<footer>
+    MSc Cyber Security | Network & System Administration | 2026
+</footer>
+
 </body>
 </html>
