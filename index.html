@@ -1,125 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CI/CD DevOps Project - Live Demo</title>
     <meta charset="UTF-8">
+    <title>Automated CI/CD Deployment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
+            background-color: #f4f6f9;
+            color: #333;
         }
 
         header {
-            background: #1e293b;
-            padding: 30px;
+            background-color: #1f2937;
+            color: white;
+            padding: 20px;
             text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            color: #38bdf8;
         }
 
         section {
             padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #1f2937;
         }
 
         .card {
-            background: #1e293b;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
-        }
-
-        h2 {
-            color: #22d3ee;
-        }
-
-        code {
-            display: block;
-            background: #0a0f1c;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 6px;
-            color: #38bdf8;
-        }
-
-        .status {
-            color: lightgreen;
-            font-weight: bold;
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         footer {
-            background: #1e293b;
+            background-color: #111827;
+            color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
-
 <body>
 
 <header>
     <h1>🚀 Automated CI/CD Deployment</h1>
-    <p>AWS EC2 + Docker + GitHub Actions</p>
+    <p>Terraform • Docker • GitHub Actions • AWS EC2</p>
 </header>
 
 <section>
 
-<div class="card">
-    <h2>📌 Project Overview</h2>
-    <p>
-        This project demonstrates automated deployment of a containerized web application 
-        using GitHub Actions CI/CD pipeline to AWS EC2.
-    </p>
-</div>
+    <div class="card">
+        <h2>Project Overview</h2>
+        <p>
+            This web application demonstrates a fully automated CI/CD pipeline
+            deployed using Infrastructure as Code (Terraform) and containerized
+            using Docker on AWS EC2.
+        </p>
+    </div>
 
-<div class="card">
-    <h2>⚙️ Infrastructure Used</h2>
-    <ul>
-        <li>AWS EC2 (Amazon Linux 2023)</li>
-        <li>Docker Containerization</li>
-        <li>GitHub Repository</li>
-        <li>GitHub Actions Workflow</li>
-        <li>SSH Secure Deployment</li>
-    </ul>
-</div>
+    <div class="card">
+        <h2>Deployment Architecture</h2>
+        <p>
+            Developer → GitHub Repository → GitHub Actions → Terraform →
+            AWS EC2 → Docker Container → Live Website
+        </p>
+    </div>
 
-<div class="card">
-    <h2>🔄 CI/CD Workflow Process</h2>
-    <p>Every push to <strong>main branch</strong> triggers:</p>
-    <ul>
-        <li>Checkout repository</li>
-        <li>SSH connection to EC2</li>
-        <li>Clone/Pull latest code</li>
-        <li>Docker build</li>
-        <li>Stop old container</li>
-        <li>Deploy updated container</li>
-    </ul>
-</div>
+    <div class="card">
+        <h2>Technologies Used</h2>
+        <ul>
+            <li><span class="badge">AWS EC2</span></li>
+            <li><span class="badge">Terraform</span></li>
+            <li><span class="badge">Docker</span></li>
+            <li><span class="badge">GitHub Actions</span></li>
+            <li><span class="badge">Nginx</span></li>
+        </ul>
+    </div>
 
-<div class="card">
-    <h2>🐳 Docker Commands Used</h2>
-    <code>
-docker build -t website .<br>
-docker run -d -p 80:80 website
-    </code>
-</div>
-
-<div class="card">
-    <h2>🌍 Live Deployment Status</h2>
-    <p>Server: AWS EC2</p>
-    <p>Container: Running</p>
-    <p>Status: <span class="status">ACTIVE</span></p>
-</div>
+    <div class="card">
+        <h2>Status</h2>
+        <p>
+            ✅ Infrastructure Provisioned via Terraform<br>
+            ✅ Docker Container Running Successfully<br>
+            ✅ CI/CD Pipeline Operational<br>
+            ✅ Live Website Accessible
+        </p>
+    </div>
 
 </section>
 
 <footer>
-    MSc Cyber Security | Network & System Administration | 2026
+    <p>Hosted on AWS EC2 | Automated DevOps Pipeline</p>
 </footer>
 
 </body>
